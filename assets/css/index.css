@@ -6,6 +6,7 @@
     place-items: center;
     justify-items: center;
     margin: var(--fluid-type-size);
+    pointer-events: none;
 }
 
 .log {
