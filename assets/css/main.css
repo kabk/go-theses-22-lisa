@@ -141,11 +141,14 @@ a:active {
 
 .menu-wrapper {
     position: absolute;
+    padding-right: 16px;
     width: 100%;
     background: none;
     left: 0;
     height: 70px;
     transition: .2s all ease;
+    background-image: linear-gradient(white, transparent);
+    mix-blend-mode: difference;
 }
 
 .menu-wrapper-fixed {
@@ -154,7 +157,7 @@ a:active {
     z-index: 100;
     /* offset */
     top: 0;
-    background: #fff;
+    /* background: #fff; */
     margin-top: 0;
     height: 50px;
     transition: .2s all ease;
@@ -224,9 +227,12 @@ a:active {
 .mobile-nav-container {
     font-family: "ApfelGrotezk-Fett";
     position: fixed;
+    top: 0;
+    left: 0;
     display: block;
     width: 100%;
-    background: #fff;
+    /* background: #fff; */
+    mix-blend-mode: difference;
     z-index: 10;
 }
 
@@ -312,14 +318,29 @@ a:active {
     height: 22px;
     position: relative;
     margin-left: 20px;
-    margin-top: 16px;
+    margin-top: 0;
+    padding: 16px 8px 32px;
+    text-align: center;
     cursor: pointer;
+    background-image: linear-gradient(white, transparent);
     display: none;
 }
 
 @media only screen and (max-width: 61em) {
     .ham-icon {
+        margin-left: 0;
+        /* padding-left: 8px; */
         display: block;
+    }
+    .ham-icon>div {
+        font-size: 2em;
+    }
+    .ham-icon.open {
+        background-image: linear-gradient(white, white);
+    }
+    .ham-icon.open+.mobile-nav {
+        padding: 16px 0 12px;
+        background-color: #fff;
     }
 }
 
@@ -351,4 +372,23 @@ a:active {
 
 .cd-top--fade-out {
     opacity: .5;
+}
+
+
+/**
+ * Note: I have omitted any vendor-prefixes for clarity.
+ * Adding them is left as an exercise for the reader.
+ */
+
+.headroom {
+    will-change: transform;
+    transition: transform 200ms linear;
+}
+
+.headroom--pinned {
+    transform: translateY(0%);
+}
+
+.headroom--unpinned {
+    transform: translateY(-100%);
 }

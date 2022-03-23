@@ -2,64 +2,64 @@
 
 $(document).ready(function() {
 
-// --------------------------------------------------
-// One Page Nav
-// --------------------------------------------------
+    // --------------------------------------------------
+    // One Page Nav
+    // --------------------------------------------------
 
-if ( $('body').hasClass('Home') ) {
-    $('.menu').onePageNav({
-        changeHash: true,
-        scrollSpeed: 1000,
-        easing: 'swing',
-    });
-}
+    if ($('body').hasClass('Home')) {
+        $('.menu').onePageNav({
+            changeHash: true,
+            scrollSpeed: 1000,
+            easing: 'swing',
+        });
+    }
 
-// --------------------------------------------------
-// Sticky header
-// --------------------------------------------------
+    // --------------------------------------------------
+    // Sticky header
+    // --------------------------------------------------
     var test = $('.hero').height();
     var offset = $('.menu').offset().top;
-	var NavTop = test + offset;
-    $('.menu-placeholder').height( $('.menu').outerHeight() );
+    var NavTop = test + offset;
+    $('.menu-placeholder').height($('.menu').outerHeight());
     var $logoHead = $('.logo-head');
     console.log(darkFirst);
     var $logoLight = $('.logo-light');
     var $logoDark = $('.logo-dark');
     var darkFirst = $logoDark.css('display') == 'block';
 
-    	$(window).scroll(function(){
-    	  if( $(window).scrollTop() > NavTop ) {
-    	    $('.menu-wrapper').addClass('menu-wrapper-fixed');
+    $(window).scroll(function() {
+        if ($(window).scrollTop() > NavTop) {
+            $('.menu-wrapper').addClass('menu-wrapper-fixed');
 
-            if ( $logoLight ) {
+            if ($logoLight) {
                 $logoLight.css('display', 'none');
                 $logoDark.css('display', 'block');
             }
 
-    	  } else {
-    	    $('.menu-wrapper').removeClass('menu-wrapper-fixed');
+        } else {
+            $('.menu-wrapper').removeClass('menu-wrapper-fixed');
 
-            if ( $logoDark && !darkFirst ) {
+            if ($logoDark && !darkFirst) {
                 $logoDark.css('display', 'none');
                 $logoLight.css('display', 'block');
             }
 
-    	  }
-    	});
+        }
+    });
 
 
 
 
-// --------------------------------------------------
-// Mobile navigation (SlickNav)
-// --------------------------------------------------
+    // --------------------------------------------------
+    // Mobile navigation (SlickNav)
+    // --------------------------------------------------
 
     $('.menu').slicknav({
         label: '',
         appendTo: '.mobile-nav',
         closeOnClick: true,
-        'afterClose': function(){afterClose()},
-        'init': function(){mobileOnePageNav()},
+        'afterClose': function() { afterClose() },
+        'init': function() { mobileOnePageNav() },
     });
 
     function mobileOnePageNav() {
@@ -77,4 +77,6 @@ if ( $('body').hasClass('Home') ) {
 
     });
 
-}); 
+
+
+});
