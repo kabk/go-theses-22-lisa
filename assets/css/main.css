@@ -113,7 +113,7 @@ a:active {
     height: 50px;
     transition: .2s all ease;
     background-image: linear-gradient(white, transparent);
-    mix-blend-mode: screen;
+    /* mix-blend-mode: screen; */
 }
 
 .menu-wrapper-fixed {
@@ -172,7 +172,7 @@ a:active {
     display: block;
     width: 100%;
     /* background: #fff; */
-    mix-blend-mode: difference;
+    /* mix-blend-mode: difference; */
     z-index: 10;
 }
 
