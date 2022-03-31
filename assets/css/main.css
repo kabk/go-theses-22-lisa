@@ -314,20 +314,25 @@ a:active {
     transform: translateY(-110%);
 }
 
+.main {
+    padding: 8px 0;
+}
+
 p {
     margin-top: 0;
     margin-bottom: 0;
-    text-indent: 4rem;
+    /* text-indent: 4rem; */
 }
 
 h3+p,
+h2+p,
 h1+p,
 blockquote+p {
     text-indent: 0;
 }
 
 p+p {
-    text-indent: 4rem;
+    /* text-indent: 4rem; */
     margin-top: 0;
 }
 
@@ -427,7 +432,7 @@ blockquote p {
 
 @media only screen and (max-width: 600px) {
     p+p {
-        text-indent: 1rem;
+        /* text-indent: 1rem; */
     }
     blockquote {
         margin-left: 2rem;

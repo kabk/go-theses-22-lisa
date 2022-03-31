@@ -93,7 +93,7 @@ img {
 .img-caption {
     float: left;
     margin: 5px 5px 0px 0px;
-    width: 1em;
+    width: 2.5em;
 }
 
 
@@ -104,7 +104,7 @@ img {
 .img-text {
     padding-top: 5px;
     text-indent: 0;
-    font-size: 0.2em;
+    font-size: 0.625em;
 }
 
 @media only screen and (max-width: 600px) {
