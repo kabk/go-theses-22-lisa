@@ -1,12 +1,3 @@
-//import Headroom from "headroom.js";
-
-// select your header or whatever element you wish
-// const header = document.querySelector("menu");
-
-// const headroom = new Headroom(header);
-// headroom.init();
-
-
 // Initialize variables
 let timer, currSeconds = 0;
 

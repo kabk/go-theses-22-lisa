@@ -31,18 +31,12 @@ html {
     src: url("../fonts/ApfelGrotezk-Brukt.woff2") format("woff2"), url("../fonts/ApfelGrotezk-Brukt.woff") format("woff");
 }
 
-img {
-    float: right;
-    padding-bottom: 2%;
-    width: auto;
-    max-width: 80%;
-    height: auto !important;
-}
-
 html {
     font-size: calc(1em + .6vw);
     line-height: 1.1;
     font-weight: 200;
+    /* word-break: break-word;*/
+    /* word-wrap: break-word;*/
 }
 
 h1,
@@ -64,7 +58,7 @@ h6 {
 
 p {
     font-weight: 900;
-    text-indent: 1.3em;
+    /*text-indent: 4em;*/
     padding: 0;
     margin: 0;
 }
@@ -74,39 +68,8 @@ p+p {
 }
 
 ::selection {
-    background: #543fce;
+    background: #007bff;
     color: #fff;
-}
-
-
-/**
-*
-* Helpers
-*
-**/
-
-@media only screen and (max-width: 61em) {
-    .mobile-visible {
-        display: block;
-    }
-}
-
-@media only screen and (max-width: 61em) {
-    .mobile-hidden {
-        display: none;
-    }
-}
-
-@media only screen and (min-width: 61em) {
-    .desktop-visible {
-        display: block;
-    }
-}
-
-@media only screen and (min-width: 61em) {
-    .desktop-hidden {
-        display: none;
-    }
 }
 
 
@@ -119,7 +82,7 @@ p+p {
 }
 
 a {
-    color: blue;
+    color: lightblue;
     text-decoration: none;
     transition: .2s all ease;
 }
@@ -141,14 +104,16 @@ a:active {
 
 .menu-wrapper {
     position: absolute;
-    padding-right: 16px;
+    /* padding-right: 16px; */
+    /* padding: 8px 0; */
     width: 100%;
     background: none;
     left: 0;
-    height: 70px;
+    /* height: 70px; */
     transition: .2s all ease;
     background-image: linear-gradient(white, transparent);
     mix-blend-mode: difference;
+    ;
 }
 
 .menu-wrapper-fixed {
@@ -159,7 +124,7 @@ a:active {
     top: 0;
     /* background: #fff; */
     margin-top: 0;
-    height: 50px;
+    /* height: 50px; */
     transition: .2s all ease;
 }
 
@@ -168,16 +133,16 @@ a:active {
 }
 
 .menu-wrapper-fixed .menu li.current a {
-    color: #fb10ff;
+    color: black;
     font-weight: 700;
 }
 
 .menu-wrapper-fixed .menu li a {
-    color: #fb10ff;
+    color: black;
 }
 
 .menu-wrapper-fixed .menu li a:hover {
-    color: #70ff80;
+    color: black;
 }
 
 .menu {
@@ -190,7 +155,7 @@ a:active {
 .menu a {
     text-align: right;
     color: black;
-    margin: 0 10px;
+    margin: 0 8px;
 }
 
 .menu li {
@@ -200,6 +165,7 @@ a:active {
 .logo-head {
     color: black;
     float: left;
+    white-space: nowrap;
 }
 
 .logo-head img {
@@ -215,7 +181,7 @@ a:active {
 
 .menu-flex {
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     justify-content: space-between;
 }
 
@@ -234,12 +200,6 @@ a:active {
     /* background: #fff; */
     mix-blend-mode: difference;
     z-index: 10;
-}
-
-@media only screen and (max-width: 61em) {
-    .mobile-nav-container {
-        padding-bottom: 13px;
-    }
 }
 
 .slicknav_menu {
@@ -279,12 +239,12 @@ a:active {
 
 .slicknav_nav li a {
     /* phone */
-    color: orangered;
+    color: black;
 }
 
 .slicknav_nav .current {
     font-weight: 700;
-    color: olive;
+    color: black;
 }
 
 .slicknav_nav .current::before {
@@ -292,23 +252,13 @@ a:active {
     position: absolute;
     width: 0%;
     height: 3px;
-    background: #70ff80;
+    background: black;
     margin-top: 0px;
     z-index: -3;
     animation-name: dashIn;
     animation-duration: .15s;
     animation-delay: .4s;
     animation-fill-mode: forwards;
-}
-
-@media only screen and (max-width: 61em) {
-    .menu-wrapper,
-    .logo-head {
-        display: none;
-    }
-    .slicknav_menu {
-        display: block;
-    }
 }
 
 
@@ -326,40 +276,15 @@ a:active {
     display: none;
 }
 
-@media only screen and (max-width: 61em) {
-    .ham-icon {
-        margin-left: 0;
-        /* padding-left: 8px; */
-        display: block;
-    }
-    .ham-icon>div {
-        font-size: 2em;
-    }
-    .ham-icon.open {
-        background-image: linear-gradient(white, white);
-    }
-    .ham-icon.open+.mobile-nav {
-        padding: 16px 0 12px;
-        background-color: #fff;
-    }
-}
-
-@media only screen and (max-width: 61em) {
-    .ham-icon {
-        display: block;
-    }
-}
-
 .cd-top {
     position: relative;
-    z-index: 5;
+    /* z-index: 5; */
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     display: inline-block;
     padding: 0.35em;
-    margin: 0.6em 0.1em 0 0.2em;
+    margin: 0.6em 0 0 0.05em;
     border: none;
-    border-radius: 0.3em;
     cursor: pointer;
     background-color: black;
     color: white;
@@ -390,5 +315,126 @@ a:active {
 }
 
 .headroom--unpinned {
-    transform: translateY(-100%);
+    transform: translateY(-110%);
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+    text-indent: 4rem;
+}
+
+h3+p,
+h1+p,
+blockquote+p {
+    text-indent: 0;
+}
+
+p+p {
+    text-indent: 4rem;
+    margin-top: 0;
+}
+
+blockquote {
+    margin-left: 4rem;
+    margin-right: 4rem;
+}
+
+blockquote p {
+    text-indent: 0;
+}
+
+.bigfoot-footnote__content p {
+    text-indent: 0;
+}
+
+#captions p,
+#chapter-03 a {
+    text-indent: 0;
+}
+
+#captions h1 {
+    margin-top: 10em;
+}
+
+
+/**
+*
+* Helpers
+*
+**/
+
+@media only screen and (max-width: 61em) {
+    .mobile-visible {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 61em) {
+    .mobile-hidden {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 61em) {
+    .desktop-visible {
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 61em) {
+    .desktop-hidden {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 61em) {
+    .ham-icon {
+        margin-left: 0;
+        /* padding-left: 8px; */
+        display: block;
+    }
+    .ham-icon>div {
+        font-size: 2.5em;
+        /*color: #a1a721;*/
+    }
+    .ham-icon.open {
+        background-image: linear-gradient(white, white);
+    }
+    .ham-icon.open+.mobile-nav {
+        padding: 16px 0 12px;
+        background-color: #fff;
+    }
+}
+
+@media only screen and (max-width: 61em) {
+    .ham-icon {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 61em) {
+    .menu-wrapper,
+    .logo-head {
+        display: none;
+    }
+    .slicknav_menu {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 61em) {
+    .mobile-nav-container {
+        padding-bottom: 13px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    p+p {
+        text-indent: 1rem;
+    }
+    blockquote {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
 }
