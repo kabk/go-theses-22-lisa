@@ -39,10 +39,6 @@ html {
     /* word-wrap: break-word;*/
 }
 
-.Home {
-    margin: 0;
-}
-
 h1,
 h2,
 h3,
@@ -110,10 +106,10 @@ a:active {
     width: 100%;
     background: none;
     left: 0;
-    height: 50px;
+    /* height: 70px; */
     transition: .2s all ease;
     background-image: linear-gradient(white, transparent);
-    /* mix-blend-mode: screen; */
+    mix-blend-mode: difference;
 }
 
 .menu-wrapper-fixed {
@@ -122,9 +118,27 @@ a:active {
     z-index: 100;
     /* offset */
     top: 0;
+    /* background: #fff; */
     margin-top: 0;
-    height: 50px;
+    /* height: 50px; */
     transition: .2s all ease;
+}
+
+.menu-wrapper-fixed .menu li {
+    padding-bottom: 6px;
+}
+
+.menu-wrapper-fixed .menu li.current a {
+    color: black;
+    font-weight: 700;
+}
+
+.menu-wrapper-fixed .menu li a {
+    color: black;
+}
+
+.menu-wrapper-fixed .menu li a:hover {
+    color: black;
 }
 
 .menu {
@@ -145,8 +159,16 @@ a:active {
 }
 
 .logo-head {
+    color: black;
     float: left;
     white-space: nowrap;
+}
+
+.logo-head img {
+    position: relative !important;
+    max-width: 100% !important;
+    max-height: 24px;
+    margin: 0;
 }
 
 .logo-dark {
@@ -172,7 +194,7 @@ a:active {
     display: block;
     width: 100%;
     /* background: #fff; */
-    /* mix-blend-mode: difference; */
+    mix-blend-mode: difference;
     z-index: 10;
 }
 
@@ -370,7 +392,7 @@ blockquote p {
     }
     .ham-icon>div {
         font-size: 2.3em;
-        color: black;
+        /*color: #a1a721;*/
     }
     .ham-icon.open {
         background-image: linear-gradient(white, white);
