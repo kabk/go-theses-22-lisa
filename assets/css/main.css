@@ -109,7 +109,7 @@ a:active {
     /* height: 70px; */
     transition: .2s all ease;
     background-image: linear-gradient(white, transparent);
-    /* mix-blend-mode: difference; */
+    mix-blend-mode: difference;
 }
 
 .menu-wrapper-fixed {
@@ -194,7 +194,7 @@ a:active {
     display: block;
     width: 100%;
     /* background: #fff; */
-    /* mix-blend-mode: difference; */
+    mix-blend-mode: difference;
     z-index: 10;
 }
 
