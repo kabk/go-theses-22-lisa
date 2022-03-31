@@ -67,8 +67,8 @@ img {
     opacity: 1
 }
 
-section {
-    top: 0;
+.grid {
+    margin-top: 1.5%;
     font-size: 3rem;
     z-index: -1;
 }
